@@ -1,0 +1,43 @@
+username: mongo01 password: i1cXAi95Me2FAyGm
+BUĞRA BÖLÜKBAŞI username: mongo02 password: 1XQEgevsmhjNsPfw
+tuğba username: mongo03 password: 7vwnoOBBbpRHA4rU  tuğba 
+Harun: mongo04 password: 3cfWgrf0DVfIAVp2
+etiken ; username: mongo05 password: 731cvDtB4zqd7pM9
+Hüseyin Gül: mongo06 password: xvWSxk5uAEGN8gps
+Ali BENZİL: mongo07 password: 5MKod3QoNikNNFSd
+Arzu ŞAHİN username: mongo08 password: mfjJv7UVWzqYp2la
+Etem username: mongo09 password: ZWKeeiw7aS1TtV30
+hasan username: mongo10 password: tloCGl5kejBMjCUk  
+erdi username: mongo11 password: IUcVdta6HWQ1poAc erdi
+Feyyaz username: mongo12 password: m2luo1FuC51qS4GU
+Suleyman username: mongo13 password: smRKWCMCmWdCx7Pd 
+kübra username: mongo14 password: f42R60yA3aTwfBnf 
+AOS username: mongo15 password: uXcHbIJR5YkOJETO 
+murat username: mongo16 password: rq0R3TBKOCHpCMfX  
+ozan Karakus username: mongo17 password: iV6VwGrim2p8mZCP  
+yasin username: mongo18 password: FLALxiZLJq1y1eOM
+eyüp username: mongo19 password: 7l62WxPzYgbFjUiA eyüp
+Selin AZ username: mongo20 password: ZwMhEJnD3DBDRMMH
+Muhammet ANBAR username: mongo21 password: xwk28Qotok21FhA8
+Osman NADAR username: mongo22 password: N7pnJLyMB97w6IHq 
+
+  
+mongodb+srv://mongo03:7vwnoOBBbpRHA4rU@test.9sayt.mongodb.net/
+
+  
+mongodb+srv://mongo17:iV6VwGrim2p8mZCP@test.9sayt.mongodb.net/
+
+mongodb+srv://mongo21:xwk28Qotok21FhA8@test.9sayt.mongodb.net/
+
+telnet test-shard-00-02.9sayt.mongodb.net 27017
+
+test-shard-00-02.9sayt.mongodb.net
+
+  
+username:  password:     etiken
+mongodb+srv://mongo05:731cvDtB4zqd7pM9@test.9sayt.mongodb.net/
+
+mongodb+srv://mongo12:m2luo1FuC51qS4GU@test-shard-00-02.9sayt.mongodb.net
+
+  
+mongodb+srv://mongo01:i1cXAi95Me2FAyGm@test.9sayt.mongodb.net/
