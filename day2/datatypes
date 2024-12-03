@@ -5,3 +5,6 @@ Boolean - True / False
 Arrays - çoklu kayıt
 Date -  dd/mon/yy
 Timestamp - dd/mon/yy hh24:mi:ss
+Object ID - auto id
+NULL
+Regular Expression
