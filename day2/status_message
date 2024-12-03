@@ -1,0 +1,20 @@
+{
+    "status":200,
+    "data": 
+    {
+        "userid":"1",
+        "type":"R-Type",
+        "name":"Renault",
+        "email":"reno@reno.com"
+    },
+    "message":"Success"
+ }
+ 
+ 
+ {
+     "error":
+     {
+     "code": 404,
+     "message":"Not Found"
+     }
+ }
