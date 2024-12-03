@@ -1,1 +1,3 @@
 # mongos
+
+Eğitimde yapılan örnekler
