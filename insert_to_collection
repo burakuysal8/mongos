@@ -1,0 +1,30 @@
+db.contacts.insert(
+{
+"TCKN": 12345678950,
+"Adı": "Ali",
+"Soyadı": "Yılmaz",
+"İkinci Adı": null,
+"IlkGelis": false,
+"Adres": [
+    {
+"Adres1": 1,
+"AcikAdres": "A Mahallesi, Deneme Sokak, No:1 Daire:1",
+"Sehir": "İstanbul"
+    },
+    {
+"Adres1": 2,
+"AcikAdres": "A Mahallesi, Deneme Sokak, No:1 Daire:1",
+"Sehir": "İstanbul"
+    }
+  ],
+"Telefon": [
+    {
+"Sabit": 1,
+"No": "2165555555"
+    },
+    {
+"Mobil": 2,
+"No": "5325555555"
+    }
+  ]
+})
