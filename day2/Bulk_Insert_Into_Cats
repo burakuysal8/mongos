@@ -1,0 +1,5 @@
+db.cats.insertMany([
+                    {"Category ID": 1,"Category Name": "Comp", "Desc": "Comp Desc"},
+                    {"Category ID": 2,"Category Name": "Domp", "Desc": "Domp Desc"},
+                    {"Category ID": 3,"Category Name": "Zomp", "Desc": "Zomp Desc"}
+                   ])   
