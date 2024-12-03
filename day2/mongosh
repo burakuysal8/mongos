@@ -1,0 +1,36 @@
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+Atlas atlas-qomz7s-shard-0 [primary] test> show dbs
+burak         192.00 KiB
+sample_mflix  121.53 MiB
+admin         348.00 KiB
+local          12.27 GiB
+Atlas atlas-qomz7s-shard-0 [primary] test> use burak
+switched to db burak
+Atlas atlas-qomz7s-shard-0 [primary] burak> show collections
+contacts
+ex2
+name
+pat_log
+Atlas atlas-qomz7s-shard-0 [primary] burak> db.cats.insertOne({"name":"Comp",})
+{
+  acknowledged: true,
+  insertedId: ObjectId('674eac63ce9068aad6c73bf8')
+}
+Atlas atlas-qomz7s-shard-0 [primary] burak> db.cats.find()
+[ { _id: ObjectId('674eac63ce9068aad6c73bf8'), name: 'Comp' } ]
+Atlas atlas-qomz7s-shard-0 [primary] burak> db.cats.insertOne({"name":"Comp","Desc":"Contains Comp"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('674eacbfce9068aad6c73bf9')
+}
+Atlas atlas-qomz7s-shard-0 [primary] burak> db.cats.find()
+[
+  { _id: ObjectId('674eac63ce9068aad6c73bf8'), name: 'Comp' },
+  {
+    _id: ObjectId('674eacbfce9068aad6c73bf9'),
+    name: 'Comp',
+    Desc: 'Contains Comp'
+  }
+]
+Atlas atlas-qomz7s-shard-0 [primary] burak>
