@@ -26,3 +26,18 @@ db.movies.find( {runtime: {$lt: 150} } ) -- select * from movies where runtime<1
 
 db.movies.find( {runtime: {$lte: 150} } ) -- select * from movies where runtime<=150
 
+select * from movies where runtime>100 and runtime<=150
+
+db.movies.find( {runtime: {$gt: 100, $lte: 150} } )
+
+db.movies.find( {runtime: {$lt:100},{lte:150})
+DB.MOVIES.FIND ( { RUNTIME: [$GT: 100, $lTE :150 ]})
+
+
+select plot,num_mflix_comments from movies where runtime>100 and runtime<=150
+
+db.movies.find( {runtime : {$gt:100,$lte:150}} ,{plot:1},{_id:0})
+
+db.movies.find({ runtime: { $gt: 100, $lte: 150}, {plot:1,num_mflix_comments:1}})
+
+db.movies.find ({}{plot:1,num_mflix_comments:1},{runtime:{$gt:100,$lte:150})
