@@ -1,0 +1,5 @@
+db.dummy_data_big.countDocuments()
+
+db.dummy_data_big.count()
+
+db.dummy_data_big.estimatedDocumentCount()
