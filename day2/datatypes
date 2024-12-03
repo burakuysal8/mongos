@@ -1,0 +1,7 @@
+String - UTF-8
+Integer - numerical (tam sayı)
+Double - floating point
+Boolean - True / False
+Arrays - çoklu kayıt
+Date -  dd/mon/yy
+Timestamp - dd/mon/yy hh24:mi:ss
