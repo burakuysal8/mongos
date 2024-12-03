@@ -1,0 +1,7 @@
+db.name.insert({
+  "name": "Fatih",
+  "age": 35,
+  "skills": ["Python", "Node.js", ".NET"],
+  "isTrainer": true
+}
+)
