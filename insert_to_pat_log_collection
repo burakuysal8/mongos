@@ -1,0 +1,22 @@
+db.pat_log.insert({"id": {"$oid": "67061e303d0b4c788340c2eb"
+    },
+    "object":{"organizasyonAdi": "Gaziantep Şehir Hastanesi",
+        "patIslemTuruValue": "Patoloji Rapor Kaydetme",
+        "yapanKullanici": "CEREN BİLKAN ÖGE",
+        "patTalepId": {
+            "$numberLong": "37082"
+        },
+        "patRaporId": {
+            "$numberLong": "28469"
+        },
+        "islemTarihi": {
+            "$date": "2024-10-09T06:09:52.072Z"
+        },
+        "_class": "his.module.pathology.model.PatolojiLogDTO"
+    },
+    "date": {
+        "$date": "2024-10-09T06:09:52.073Z"
+    },
+    "userName": "101232",
+    "environment": "http://hbys.gaziantep.yerel:80"
+})
