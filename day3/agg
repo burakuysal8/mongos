@@ -1,2 +1,107 @@
+db.comments.find() -- select * from comments;
 
-d
+db.comments.find({text:1})
+
+db.comments.find({},{text:1})  -- select text from comments where 1=1;
+
+db.comments.find( { }, {movie_id:1,text:1} )
+
+db.comments.find( { name:"Doreah"}, {movie_id:1,text:1} )
+
+db.comments.find( { name:"Doreah"}, {movie_id:1,text:1,_id:0} )  --select movieID,text from comments where name='Doreah'
+
+db.comments.find( { name:"doreah"}, {movie_id:1,text:1,_id:0} )  --select movieID,text from comments where name='Doreah'
+
+db.movies.find( {runtime: 150} ) -- select * from movies where runtime=150;
+
+db.movies.find( {runtime: 150, rated: "R"} ) -- select * from movies where runtime=150 and rated='R'
+
+db.movies.find( { $or: [ {runtime:150},{rated:"R"} ] } ) -- select * from movies where runtime=150 or rated='R'
+
+db.movies.find( {runtime: {$gt: 150} } ) -- select * from movies where runtime>150
+
+db.movies.find( {runtime: {$gte: 150} } ) -- select * from movies where runtime>=150
+
+db.movies.find( {runtime: {$lt: 150} } ) -- select * from movies where runtime<150
+
+db.movies.find( {runtime: {$lte: 150} } ) -- select * from movies where runtime<=150
+
+select * from movies where runtime>100 and runtime<=150
+
+db.movies.find( {runtime: {$gt: 100, $lte: 150} } )
+
+db.movies.find( {runtime: {$lt:100},{lte:150})
+DB.MOVIES.FIND ( { RUNTIME: [$GT: 100, $lTE :150 ]})
+
+
+select plot,num_mflix_comments from movies where runtime>100 and runtime<=150
+
+db.movies.find( {runtime : {$gt:100,$lte:150}} ,{plot:1},{_id:0})
+
+db.movies.find({ runtime: { $gt: 100, $lte: 150}, {plot:1,num_mflix_comments:1}})
+
+db.movies.find ({}{plot:1,num_mflix_comments:1},{runtime:{$gt:100,$lte:150})
+
+
+db.comments.find({},{text:0})
+
+
+db.movies.find({plot: /bc/ })  -- select * from movies where plot like '%bc%'
+
+Claude leaves the family ranch in Oklahoma for New York where he is rapidly indoctrinated into the youth subculture and subsequently drafted.
+
+db.movies.find({plot: {$regex: /bc/ } })  -- select * from movies where plot like '%bc%'
+
+
+db.movies.find({plot: {$regex: /^bc/ } }) 
+
+
+db.movies.find({runtime:65}).sort({released:1}) -- select * from movies where runtime=65 order by released asc
+
+db.movies.find({runtime:65}).sort({released:-1}) --select * from movies where runtime=65 order by released desc
+
+db.movies.find({runtime:65},{"released":1,"_id":0}).sort({"released":-1})
+=
+db.movies.find({},{"released":1,"_id":0},{runtime:65}).sort({"released":-1})
+
+db.movies.count() -- select count(8) from movies
+db.movies.find().count() --select count(8) from (subquery)
+
+db.movies.find({runtime:65},{"released":1,"_id":0}).sort({"released":-1}).count()
+
+db.movies.find({"imdb.votes":{$gt:5000}}).count() --select count(8) from movies where imdb.votes>5000
+
+db.movies.count()
+
+db.movies.find({ "poster":  {$exists: true } }).count()  -- select count(8) from movies where poster is not null 
+=
+db.movies.count({ "poster":  {$exists: true } })
+
+
+db.movies.explain().find({ "poster":  {$exists: true } }).count()
+=
+db.movies.explain().count({ "poster":  {$exists: true } })
+
+
+db.movies.distinct("rated")
+
+db.movies.find("rated")
+
+db.movies.distinct("rated")
+
+db.movies.aggregate([ {$group:{ _id:"$rated"}  } ]) -- select rated from movies group by rated
+
+db.movies.aggregate([ {$group:{ _id:"$rated"}  } ]).count() -- select count(8) from movies group by rated
+
+
+db.movies.aggregate([ {$group:{ _id:"$rated"}  } ]).limit(5)
+-- select rated from movies group by rated fetch first 5 rows only
+--! select rated from movies group by rated rownum<=5
+
+
+db.movies.aggregate([ {$group:{ _id:"$released"}  } ]).limit(5)
+=
+db.movies.aggregate( [ {$group: {_id:"$released"}},{$limit:5} ] )
+
+
+db.movies.aggregate
