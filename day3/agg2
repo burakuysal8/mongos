@@ -1,0 +1,42 @@
+db.movies.aggregate([
+                    {
+                        $match: { "awards.wins": {$gt:1 }}
+                    },
+                    {
+                        $group: {_id:"$year", totalWins: {$sum: "$awards.wins"}}    
+                    }
+                    ]
+                    )      
+                    
+db.movies.find()
+
+db.movies.aggregate([
+                    {
+                        $match: { "awards.wins": {$gt:1 }}
+                    },
+                    {
+                        $group: {_id:"$year", totalWins: {$sum: "$awards.wins"}}    
+                    }
+                    ]
+                    ).sort({"year":-1})
+                    
+                    
+db.movies.aggregate(
+                    [
+                        {
+                            $match: { "awards.wins": {$gt:1 }}
+                        },
+                            {
+                                $sort: {"year":1}
+                            },
+                                {
+                                    $project:
+                                        {"awards.wins":1,"year":1,"_id":0}
+                                },
+                                    {
+                                        $limit: 5
+                                    }
+                    ]
+                    )   
+                    
+db.comments.find()
